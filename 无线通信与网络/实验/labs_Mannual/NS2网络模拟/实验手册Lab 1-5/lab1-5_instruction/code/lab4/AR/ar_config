@@ -1,0 +1,9 @@
+ifconfig eth0 inet6 add 2001:5c0:8d03:2::2/64
+iwconfig wlan0 mode ad-hoc essid visitnet enc off
+ifconfig wlan0 inet6 add 2001:5c0:8d03:3::1/64
+iwconfig wlan0 channel 3
+echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
+echo 0 > /proc/sys/net/ipv6/conf/all/autoconf
+echo 0 > /proc/sys/net/ipv6/conf/all/accept_ra
+echo 0 > /proc/sys/net/ipv6/conf/all/accept_redirects
+ip route add 2001:5c0:8d03:1::/64 via 2001:5c0:8d03:2::1

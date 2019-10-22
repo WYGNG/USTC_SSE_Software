@@ -1,0 +1,1 @@
+iwconfig wlan0 essid visitnet channel 3

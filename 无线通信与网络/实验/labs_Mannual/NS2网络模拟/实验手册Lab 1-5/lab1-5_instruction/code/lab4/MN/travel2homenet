@@ -1,0 +1,1 @@
+iwconfig wlan0 essid homenet channel 1

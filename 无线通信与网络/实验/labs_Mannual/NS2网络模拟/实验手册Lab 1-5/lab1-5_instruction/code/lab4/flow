@@ -1,0 +1,43 @@
+(0)reedit essid and ip
+--------------------------------
+
+HA-AR-CN-MN
+
+(1)HA
+cd Desktop/lab4/HA
+./ha_config
+./wlan_up
+./radvd_start
+./mip6d_start
+
+(2)AR
+cd Desktop/lab4/AR
+./ar_config
+./wlan_up
+./radvd_start
+
+(3)CN
+cd Desktop/lab4/CN
+./cn_config
+./wlan_up
+
+(4)MN
+cd Desktop/lab4/MN
+./mn_config
+./wlan_up
+./mip6d_start
+--------------------------------
+
+(5)CN
+(open VLC)
+
+(6)MN
+(open VLC)
+(wait a second and you can see the video on MN)
+(open a new xterm)
+sudo su
+cd Desktop/lab4/MN
+./travel2visitnet 
+(wait a second and you can see the video continue to display on MN)
+./travel2homenet
+(wait a second and you can see the video continue to display on MN)

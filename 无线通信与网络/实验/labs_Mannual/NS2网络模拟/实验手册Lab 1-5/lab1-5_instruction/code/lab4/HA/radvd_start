@@ -1,0 +1,4 @@
+cp radvd.conf /etc/
+cp radvd.conf /usr/local/etc/
+radvd start
+

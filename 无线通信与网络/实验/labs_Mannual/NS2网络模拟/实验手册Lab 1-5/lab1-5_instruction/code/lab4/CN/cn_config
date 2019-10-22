@@ -1,0 +1,2 @@
+ifconfig eth0 inet6 add 2001:5c0:8d03:2::3/64
+ip route add 2001:5c0:8d03:1::/64 via 2001:5c0:8d03:2::1

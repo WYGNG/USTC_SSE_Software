@@ -1,0 +1,3 @@
+cp mip6d.conf /etc/mip6d.conf
+
+mip6d -c /etc/mip6d.conf

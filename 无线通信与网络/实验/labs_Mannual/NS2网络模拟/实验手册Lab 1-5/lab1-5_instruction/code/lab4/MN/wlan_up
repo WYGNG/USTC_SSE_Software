@@ -1,0 +1,4 @@
+ifconfig wlan0 up
+ifconfig ip6tnl0 up
+ifconfig sit0 up
+

@@ -1,0 +1,36 @@
+###
+Assume group id : 7;
+       Mac Addr of PC-A : c8:3a:35:c6:23:a9
+       Mac Addr of PC-C : c8:3a:35:c4:f8:17
+###
+
+
+sudo su
+iwconfig wlan0 essid test_group7 mode ad-hoc 
+iwconfig wlan0 essid test_group7 mode ad-hoc
+ifconfig wlan0 up
+(A)
+ifconfig wlan0 10.1.7.1 netmask 255.255.255.0 up
+(B)
+ifconfig wlan0 10.1.7.2 netmask 255.255.255.0 up
+(C)
+ifconfig wlan0 10.1.7.3 netmask 255.255.255.0 up
+
+iwconfig wlan0
+ifconfig wlan0
+----------------------------------
+
+ping 10.1.7.1
+ping 10.1.7.2
+ping 10.1.7.3
+----------------------------------
+
+(A)
+iptables -A INPUT -m mac --mac-source c8:3a:35:c4:f8:17 -j DROP
+(C)
+iptables -A INPUT -m mac --mac-source c8:3a:35:c6:23:a9 -j DROP
+----------------------------------
+
+ping 10.1.7.1
+ping 10.1.7.2
+ping 10.1.7.3

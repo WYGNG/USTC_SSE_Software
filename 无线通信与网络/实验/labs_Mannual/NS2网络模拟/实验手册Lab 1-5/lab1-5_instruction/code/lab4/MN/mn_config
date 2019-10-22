@@ -1,0 +1,11 @@
+sudo iwconfig wlan0 mode ad-hoc essid homenet enc off
+sudo ifconfig wlan0 inet6 add 2001:5c0:8d03:1::2/64
+sudo iwconfig wlan0 channel 1
+echo "0" > /proc/sys/net/ipv6/conf/wlan0/forwarding
+echo "1" > /proc/sys/net/ipv6/conf/wlan0/autoconf
+echo "1" > /proc/sys/net/ipv6/conf/wlan0/accept_ra
+echo "1" > /proc/sys/net/ipv6/conf/wlan0/accept_redirects
+echo "0" > /proc/sys/net/ipv6/conf/all/forwarding
+echo "1" > /proc/sys/net/ipv6/conf/all/autoconf
+echo "1" > /proc/sys/net/ipv6/conf/all/accept_ra
+echo "1" > /proc/sys/net/ipv6/conf/all/accept_redirects

@@ -1,0 +1,32 @@
+(A)
+route -n > olsrresult1.1
+----------------------------
+
+(ALL)
+olsrd -i wlan0 
+[stop on A after 10s] 
+
+(A)
+route -n > olsrresult1.2
+----------------------------
+
+(A)
+olsrd -i wlan0 
+[open 2nd terminal, remember to type sudo su]
+ping 10.1.7.3
+
+(A)
+[once get a ping response, open 3rd terminal, remember to type sudo su]
+route -n > olsrresult1.3
+[stop all terminals on A] 
+-----------------------------
+
+(A)
+olsrd -i wlan0
+[open 2nd terminal]
+ping 10.1.7.3
+[once get a ping response, stop ping]
+
+(A)
+[after 1min]
+route -n > olsrresult1.4
